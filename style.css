@@ -1,0 +1,21 @@
+p {
+  font-size: 1.5em;
+  font-style: italic;
+  font-family: sans-serif;
+  color: #59C;
+  background-color: #000;
+  width: 70%;
+}
+
+#btn {
+ color: #000;
+ background-color: transparent;
+padding: 10px;
+}
+
+#btn:hover {
+ background-color: #FFFF00;
+padding: 10px;
+cursor: pointer;
+font-weight: bold;
+}
