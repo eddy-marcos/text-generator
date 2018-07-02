@@ -1,21 +1,32 @@
+h2 {
+  text-align: center;
+  color: #50394c;
+  text-shadow: 2px 2px #ffef96;
+}
+
 p {
+  text-align: center;
+  padding: 10px;
   font-size: 1.5em;
-  font-style: italic;
-  font-family: sans-serif;
-  color: #59C;
-  background-color: #000;
+  font-family: 'Encode Sans Condensed', sans-serif;
+  color: #50394c;
+  background-color: #f4e1d2;
   width: 70%;
+  border-radius: 15px;
+}
+p:hover {
+  padding: 20px;
+  font-size: 1.5em:
 }
 
 #btn {
- color: #000;
- background-color: transparent;
-padding: 10px;
+  background-color: #50394c;
+  border-radius: 10px;
+  color: #ffef96;
+  padding: 5px;
 }
 
 #btn:hover {
- background-color: #FFFF00;
-padding: 10px;
-cursor: pointer;
-font-weight: bold;
+  font-weight: bold;
+  padding: 10px;
 }

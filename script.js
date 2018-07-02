@@ -1,54 +1,38 @@
+//iife function
 (function () {
-getData();
+  getData();
 
-function getData() {
-  var httpRequest = new XMLHttpRequest();
-  httpRequest.open('GET', 'https://jsonplaceholder.typicode.com/comments')
-  httpRequest.send();
+  function getData() {
 
-  httpRequest.onreadystatechange = function () {
+    var httpRequest = new XMLHttpRequest(); //create a new instance
+    httpRequest.open('GET', 'https://jsonplaceholder.typicode.com/comments')
+    httpRequest.send(); //send to server
+
+    httpRequest.onreadystatechange = function () {
       if(httpRequest.readyState === XMLHttpRequest.DONE){
-          if (httpRequest.status === 200) {
-                console.log('Successfully retrieved data');
+        if (httpRequest.status === 200) { //if successfull
+          console.log('Successfully retrieved data');
+        }else {
+          console.log('a problem occured');
+        }
+      }
+    }
 
-              //generateComment(JSON.parse(httpRequest.responseText));
+    var btn = document.getElementById('btn'); // grab button element
+    // add a click event
+    btn.addEventListener('click', function () {
+      var text = JSON.parse(httpRequest.responseText);
+      //generate random num
+      var randomId = Math.floor(Math.random() * 505);
 
-          }else {
-            console.log('a problem occured');
-}
-}
-  }
-  var btn = document.getElementById('btn');
+      var paragraph = document.getElementById('paragraph');
 
-  btn.addEventListener('click', function () {
-          var text = JSON.parse(httpRequest.responseText);
-          var randomId = Math.floor(Math.random() * 505);
-//console.log(text[0].name);
-         var paragraph = document.getElementById('paragraph');
+      var currentText = ' " ' +text[randomId].body + ' " ';
 
-            var currentText = text[randomId].body;
+      paragraph.innerHTML = currentText;
 
-paragraph.innerHTML = currentText;
+    });
 
-  });
-
-
-
-} //getData
-
-      // var btn = document.getElementById('btn');
-      // btn.addEventListener('click', generateComment);
-
-//   function generateComment(data){
-//     //console.log(typeof(data)); //object
-//
-//       var container = document.querySelector('.text');
-//       var comment = document.createElement('p');
-//       var randomId = Math.floor(Math.random() * 505);
-//
-//           comment.textContent = data[5].id;
-//           container.appendChild(comment);
-//
-// } //generateComment
+  } //getData
 
 }) ();
