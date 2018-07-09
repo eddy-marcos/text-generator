@@ -1,5 +1,5 @@
 h2 {
-  text-align: center;
+  text-align: left;
   color: #50394c;
   text-shadow: 2px 2px #ffef96;
 }
@@ -24,6 +24,7 @@ p:hover {
   border-radius: 10px;
   color: #ffef96;
   padding: 5px;
+  outline: none;
 }
 
 #btn:hover {

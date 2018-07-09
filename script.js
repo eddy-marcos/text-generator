@@ -27,8 +27,8 @@
 
       var paragraph = document.getElementById('paragraph');
 
-      var currentText = ' " ' +text[randomId].body + ' " ';
-
+      var currentText = ' " ' + text[randomId].body + ' " ';
+        //show in browser
       paragraph.innerHTML = currentText;
 
     });
